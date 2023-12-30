@@ -14,7 +14,7 @@ from torch.utils.data import Dataset, DataLoader
 
 from src.open_clip.model import get_cast_dtype, trace_model
 from src.open_clip.factory import create_model_and_transforms
-from src.open_clip.zero_shot_classifier import *
+from src.training.zero_shot import zero_shot_classifier 
 from src.training.logger import setup_logging
 from src.training.distributed import is_master, init_distributed_device, broadcast_object
 from src.training.precision import get_autocast
@@ -376,7 +376,7 @@ def test(args):
         for k in results:
             results_all[k] = results[k]
     
-    print(results_all)
+#     print(results_all)
     if args.test_result_save_path:
         with open(args.test_result_save_path, 'wb') as f:
             pickle.dump({'model': args.model, 'checkpoint': args.pretrained, 'results': results_all}, f)
