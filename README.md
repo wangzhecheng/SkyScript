@@ -61,7 +61,26 @@ Here the `{FILENAME}` should be replaced with the following:
 * `SkyScript_val_5K_filtered_by_CLIP_laion_RS.csv`: **Validation set** used during training. The similarity is determined by the CLIP-laion-RS model. It contains 5K image-text pairs.
 * `SkyScript_test_30K_filtered_by_CLIP_laion_RS.csv`: **Test set** used for testing cross-modal retrieval performance. The similarity is determined by the CLIP-laion-RS model. It contains 30K image-text pairs.
 
-**NOTE: Here the captions are automatically assembled from semantic tags using a rule-based approach, as described in the paper. We welcome and encourage researchers to use more advanced techniques (e.g., Large Language Model) to generate more natural and diverse captions from semantic tags (provided in the meta files).**
+**NOTE: Here the captions are automatically assembled from semantic tags using a rule-based approach, as described in the paper. We welcome and encourage researchers to use more advanced techniques (e.g., Large Language Model) to generate more natural and diverse captions from semantic tags (semantic tags are provided in the meta files).**
+
+
+### Download benchmark datasets
+
+The benchmark datasets can be downloaded using the following command:
+
+```
+curl -O https://opendatasharing.s3.us-west-2.amazonaws.com/SkyScript/benchmark/{FILENAME}
+```
+
+Here the `{FILENAME}` should be replaced with the following:
+
+* **Scene classification**: `{FILENAME}` should be replaced with `aid.zip` (AID), `eurosat.zip` (EuroSAT), `fmow.zip` (fMoW), `millionaid.zip` (MillionAID), `nwpu.zip` (NWPU-RESISC45), `patternnet.zip` (PatterNet), `rsicb256.zip` (RSI-CB256), and `SkyScript_cls.zip`. Here `SkyScript_cls.zip` is the in-domain test set (containing 70 classes) while the remaining ones are out-of-domain test sets (datasets not used for training).
+* **Fine-grained classification**: `{FILENAME}` should be replaced with `roof_shape.zip` (roof shape classification), `smoothness.zip` (road smoothness classification), and `surface.zip` (road surface material classification).
+* **Cross-modal retrieval**: `{FILENAME}` should be replaced with `RSICD.zip`, `RSITMD.zip`, and `ucmcaptions.zip` (UCM-Captions).
+
+
+
+
 
 
 
