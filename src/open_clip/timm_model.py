@@ -1,3 +1,7 @@
+"""
+Adapted from https://github.com/mlfoundations/open_clip. Copyright (c) 2012-2021 Gabriel Ilharco, Mitchell Wortsman, Nicholas Carlini, Rohan Taori, Achal Dave, Vaishaal Shankar, John Miller, Hongseok Namkoong, Hannaneh Hajishirzi, Ali Farhadi, Ludwig Schmidt
+"""
+
 """ timm model adapter
 
 Wraps timm (https://github.com/rwightman/pytorch-image-models) models for use as a vision tower in CLIP model.

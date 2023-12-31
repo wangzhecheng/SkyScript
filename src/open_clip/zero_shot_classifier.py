@@ -1,3 +1,7 @@
+"""
+Adapted from https://github.com/mlfoundations/open_clip. Copyright (c) 2012-2021 Gabriel Ilharco, Mitchell Wortsman, Nicholas Carlini, Rohan Taori, Achal Dave, Vaishaal Shankar, John Miller, Hongseok Namkoong, Hannaneh Hajishirzi, Ali Farhadi, Ludwig Schmidt
+"""
+
 from functools import partial
 from itertools import islice
 from typing import Callable, List, Optional, Sequence, Union
