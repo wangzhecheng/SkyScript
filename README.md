@@ -8,6 +8,8 @@ Remote sensing imagery, despite its broad applications in helping achieve Sustai
 
 The model implementation of CLIP is adapted from the [OpenCLIP](https://github.com/mlfoundations/open_clip) repository. 
 
+**News [2024/12]** We have converted raw OSM tags into free-form, smoother, and more natural language description using ChatGPT for each image. These new datasets (CSV files) can be downloaded with the URL links [Full 5M dataset](https://opendatasharing.s3.us-west-2.amazonaws.com/SkyScript/dataframe/SkyScript_train_unfiltered_5M_language_polished.csv), [Top 50%](https://opendatasharing.s3.us-west-2.amazonaws.com/SkyScript/dataframe/SkyScript_train_top50pct_filtered_by_CLIP_laion_RS_language_polished.csv), [Top 30%](https://opendatasharing.s3.us-west-2.amazonaws.com/SkyScript/dataframe/SkyScript_train_top30pct_filtered_by_CLIP_laion_RS_language_polished.csv).
+
 ## Download
 
 ### Download SkyScript dataset
@@ -62,6 +64,10 @@ Here the `{FILENAME}` should be replaced with the following:
 * `SkyScript_train_top50pct_filtered_by_CLIP_laion_RS.csv`: The top 50% most similar image-text pairs for **training**. The similarity is determined by the CLIP-laion-RS model. It contains 2.6 million image-text pairs.
 * `SkyScript_val_5K_filtered_by_CLIP_laion_RS.csv`: **Validation set** used during training. The similarity is determined by the CLIP-laion-RS model. It contains 5K image-text pairs.
 * `SkyScript_test_30K_filtered_by_CLIP_laion_RS.csv`: **Test set** used for testing cross-modal retrieval performance. The similarity is determined by the CLIP-laion-RS model. It contains 30K image-text pairs.
+* `SkyScript_train_unfiltered_5M.csv`: **(New!)** Used ChatGPT to convert raw OSM tags into free-formed, smoother, and more natural language descripion. It contains 4.7 million image-text pairs.
+* `SkyScript_train_top30pct_filtered_by_CLIP_laion_RS_language_polished.csv`: **(New!)** Used ChatGPT to convert raw OSM tags into free-formed, smoother, and more natural language descripion. The top 30% most similar image-text pairs (1.5 million). The similarity is determined by the CLIP-laion-RS model.
+* `SkyScript_train_top50pct_filtered_by_CLIP_laion_RS_language_polished.csv`: **(New!)** Used ChatGPT to convert raw OSM tags into free-formed, smoother, and more natural language descripion. The top 50% most similar image-text pairs (2.6 million). The similarity is determined by the CLIP-laion-RS model.
+
 
 **NOTE: Here the captions are automatically assembled from semantic tags using a rule-based approach, as described in the paper. We welcome and encourage researchers to use more advanced techniques (e.g., Large Language Model) to generate more natural and diverse captions from semantic tags (semantic tags are provided in the meta files).**
 
