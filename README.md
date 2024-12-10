@@ -23,8 +23,8 @@ curl -O https://opendatasharing.s3.us-west-2.amazonaws.com/SkyScript/images2.zip
 
 **Please replace `images2.zip` with filenames ranging from `images2.zip` to `images7.zip` to download all 6 parts**. Each zip file can be uncompressed into a folder. Image files (.jpg) are contained in these folders. The filename of each image file contains key meta information (object ID, image source, year) about the image. For example, ``a198234555_CH_19.jpg`` means: 
 
-1. The image is retrieved with the OSM object 198234555 as the focus object (not necessarily at the image center).
-2. The image source is `CH`, which is the alias of `ORTHO/Switzerland/SWISSIMAGE/10cm` (SWISSIMAGE 10cm RGB imagery from [Google Earth Engine](https://earthengine.google.com/)). The conversion between the image source alias code and Google Earth Engine image collection name is in the file .
+1. The image is retrieved with the OSM object with ID 198234555 as the focus object (not necessarily at the image center). Here the leading "a" means "area" (polygon). Other leading letters are "w" ("way", polyline) and "n" ("node", point).
+2. The image source is `CH`, which is the alias of `ORTHO/Switzerland/SWISSIMAGE/10cm` (SWISSIMAGE 10cm RGB imagery from [Google Earth Engine](https://earthengine.google.com/)). The conversion between the image source alias code and Google Earth Engine image collection name is in [image_sources.py](https://github.com/wangzhecheng/SkyScript/blob/main/image_sources.py).
 3. The image was captured in 2019.
 
 #### Download meta files
